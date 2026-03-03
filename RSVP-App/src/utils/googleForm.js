@@ -14,7 +14,6 @@
 */
 
 export const submitToGoogleForm = async (formData) => {
-<<<<<<< HEAD
   // TODO: PASTE YOUR GOOGLE FORM ACTION URL HERE
   // It usually looks like: https://docs.google.com/forms/u/0/d/e/LONG_ID_HERE/formResponse
   const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSc8vM2qbY2YPyfTikGywd15_ZBDxNkzkKVmVu1m87n2x-rt6A/formResponse'; 
@@ -24,18 +23,6 @@ export const submitToGoogleForm = async (formData) => {
   const formEntries = {
     'entry.446531179': formData.name,       // Name field ID
     'entry.1330448021': formData.dietary     // Dietary requirements ID
-=======
-  // TODO: PASTE YOUR NEW RECEPTION GOOGLE FORM ACTION URL HERE
-  // It usually looks like: https://docs.google.com/forms/u/0/d/e/LONG_ID_HERE/formResponse
-  const FORM_URL = 'YOUR_GOOGLE_FORM_URL_HERE'; 
-  
-  // TODO: MAP YOUR NEW RECEPTION FORM ENTRY IDs HERE
-  // Replace 'entry.xxxxxx' with the actual IDs from your pre-filled link
-  // You can find these by getting a "pre-filled link" from your new Google Form
-  const formEntries = {
-    'entry.XXXXXX': formData.name,       // Name field ID
-    'entry.XXXXXX': formData.dietary     // Dietary requirements ID
->>>>>>> e5aeb9c36d898e67e4ce44d874f09981c09cfe0e
   };
   
   // Convert to URLSearchParams for submission

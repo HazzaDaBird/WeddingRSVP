@@ -85,22 +85,12 @@ const RSVPForm = () => {
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-bold text-stone-800 mb-6 tracking-tight font-serif">Harrison <span className="text-wedding-gold">&</span> Giovanna</h1>
           <div className="text-stone-600 space-y-1 font-sans font-light tracking-wide text-sm uppercase">
-<<<<<<< HEAD
             <p>Invite you to celebrate their wedding</p>
           </div>
           <div className="mt-6 space-y-2">
             <p className="text-xl font-semibold text-stone-800">July 11th, 2026</p>
             <p className="text-stone-500 font-sans">3:00 PM</p>
             <p className="text-lg font-medium text-stone-700 mt-2">Abney Park Chapel</p>
-=======
-            <p>Invite you to celebrate their reception</p>
-          </div>
-          <div className="mt-6 space-y-2">
-            <p className="text-xl font-semibold text-stone-800">July 11th, 2026</p>
-            <p className="text-stone-500 font-sans">From 5:30 PM</p>
-            <p className="text-lg font-medium text-stone-700 mt-2">The Chapel Bar</p>
-            <p className="text-stone-500 text-sm">29 Penton St, London N1 9PX</p>
->>>>>>> e5aeb9c36d898e67e4ce44d874f09981c09cfe0e
           </div>
         </div>
 
@@ -167,7 +157,6 @@ const RSVPForm = () => {
 
           {/* Message removed */}
 
-<<<<<<< HEAD
           <div className="pt-8 mt-8 border-t border-stone-100">
             <h3 className="text-lg font-bold text-stone-800 mb-2 font-serif text-center">Secondary Event: Chapel Bar</h3>
             <p className="text-stone-500 text-sm italic text-center font-sans">
@@ -175,8 +164,6 @@ const RSVPForm = () => {
             </p>
           </div>
 
-=======
->>>>>>> e5aeb9c36d898e67e4ce44d874f09981c09cfe0e
           <div className="pt-4">
             <button
               type="submit"
