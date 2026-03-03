@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --color-wedding-gold: #c5a059;
+  --color-wedding-sand: #fbfaf8;
+  --color-wedding-green: #4a5d4e;
+}
+
+/* Base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-wedding-sand);
+  color: #292524;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
