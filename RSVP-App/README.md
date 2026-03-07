@@ -1,16 +1,33 @@
-# React + Vite
+# Wedding RSVP App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is configured to deploy to GitHub Pages for the repository:
 
-Currently, two official plugins are available:
+- `HazzaDaBird/WeddingRSVP`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Local development
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Deploy to GitHub Pages
 
-## Expanding the ESLint configuration
+```bash
+npm run deploy
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+That command builds the app and publishes the `dist` folder to the `gh-pages` branch.
+
+## GitHub Pages settings
+
+In the GitHub repository settings:
+
+1. Open **Settings** → **Pages**
+2. Set **Source** to **Deploy from a branch**
+3. Choose the `gh-pages` branch
+4. Choose the `/ (root)` folder
+
+The expected live URL is:
+
+- `https://HazzaDaBird.github.io/WeddingRSVP/`
