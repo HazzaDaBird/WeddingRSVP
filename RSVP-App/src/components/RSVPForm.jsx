@@ -5,6 +5,7 @@ import chapelBackground from '../assets/chapel.webp';
 const RSVPForm = () => {
   const [formData, setFormData] = useState({
     names: [''],
+    attending: 'yes',
     dietary: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,7 +64,8 @@ const RSVPForm = () => {
     // Create submission payload with the combined name string
     const submissionData = {
       ...formData,
-      name: namesString
+      name: namesString,
+      dietary: formData.attending === 'no' ? 'NOT ATTENDING' : formData.dietary
     };
     
     // Simulate submission or call actual Google Form logic
@@ -158,13 +160,37 @@ const RSVPForm = () => {
                 </button>
               </div>
 
-              {/* Attending removed */}
-
+              <div className="space-y-3">
+                <span className="block text-xs font-bold text-stone-500 uppercase tracking-wider">Will you be joining us?</span>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <label className={`flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3 font-sans text-sm transition-colors ${formData.attending === 'yes' ? 'border-wedding-gold bg-wedding-sand text-stone-800' : 'border-stone-200 bg-white text-stone-600 hover:border-stone-300'}`}>
+                    <input
+                      type="radio"
+                      name="attending"
+                      value="yes"
+                      checked={formData.attending === 'yes'}
+                      onChange={handleChange}
+                      className="h-4 w-4 border-stone-300 text-wedding-gold focus:ring-wedding-gold"
+                    />
+                    Yes, we’ll be there
+                  </label>
+                  <label className={`flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3 font-sans text-sm transition-colors ${formData.attending === 'no' ? 'border-wedding-gold bg-wedding-sand text-stone-800' : 'border-stone-200 bg-white text-stone-600 hover:border-stone-300'}`}>
+                    <input
+                      type="radio"
+                      name="attending"
+                      value="no"
+                      checked={formData.attending === 'no'}
+                      onChange={handleChange}
+                      className="h-4 w-4 border-stone-300 text-wedding-gold focus:ring-wedding-gold"
+                    />
+                    Cant make it!
+                  </label>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-5 pt-2 animate-fade-in transition-all duration-500 ease-in-out">
-                {/* Guests removed */}
-
+              {formData.attending === 'yes' && (
                 <div>
                   <label htmlFor="dietary" className="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-1">Dietary Requirements</label>
                   <textarea
@@ -177,6 +203,7 @@ const RSVPForm = () => {
                     placeholder="Vegetarian, nut allergy, etc."
                   />
                 </div>
+              )}
             </div>
 
             <div className="pt-4">
