@@ -79,7 +79,7 @@ const RSVPForm = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif flex items-center justify-center relative overflow-hidden bg-wedding-sand">
+    <div className={`min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif flex items-center justify-center relative overflow-hidden ${showBackground ? 'bg-wedding-sand' : 'bg-[#d9a06f]'}`}>
       {showBackground && <div className="absolute inset-0" style={backgroundStyle}></div>}
       <div className="max-w-2xl w-full bg-white p-8 md:p-12 rounded-xl shadow-2xl border border-stone-100 relative z-10">
         {/* Decorative top border */}
@@ -216,6 +216,10 @@ const RSVPForm = () => {
             </p>
           </div>
         </div>
+
+        <p className="mt-8 text-sm text-stone-600 font-sans leading-6 text-center">
+          Please don’t worry about getting us a gift. As we’ll be moving away soon after the wedding, we just want you to have a great time!
+        </p>
       </div>
     </div>
   );
