@@ -79,7 +79,7 @@ const RSVPForm = () => {
   };
 
   return (
-    <div className={`min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif flex items-center justify-center relative overflow-hidden ${showBackground ? 'bg-wedding-sand' : 'bg-[#d9a06f]'}`}>
+    <div className={`min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-serif flex items-center justify-center relative overflow-hidden ${showBackground ? 'bg-wedding-sand' : 'bg-[#e1823069]'}`}>
       {showBackground && <div className="absolute inset-0" style={backgroundStyle}></div>}
       <div className="max-w-2xl w-full bg-white p-8 md:p-12 rounded-xl shadow-2xl border border-stone-100 relative z-10">
         {/* Decorative top border */}
